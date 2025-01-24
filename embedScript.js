@@ -79,3 +79,5 @@ const RenderSummaryBanner = async (bannerId, targetSelector = 'body') => {
     console.error('No summary or detail available.');
   }
 };
+
+window.GetSummaryBanner = (id) => RenderSummaryBanner(id, '#my-custom-container');
