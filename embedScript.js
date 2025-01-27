@@ -8,7 +8,7 @@ const loadCSS = (cssUrl) => {
 };
 
 // Load the CSS file
-loadCSS('summary-style.css'); // Replace with your hosted CSS file URL
+loadCSS('embed.css'); // Replace with your hosted CSS file URL
 
 document.addEventListener('DOMContentLoaded', window.GetSummaryBanner = (id, targetSelector = '#my-custom-container') => {
   const fetchApi = async (id) => {
