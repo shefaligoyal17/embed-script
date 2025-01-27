@@ -1,16 +1,16 @@
 // Function to dynamically load a CSS file
-const loadCSS = (cssUrl) => {
-  const link = document.createElement('link');
-  link.rel = 'stylesheet';
-  link.href = cssUrl;
-  link.type = 'text/css';
-  document.head.appendChild(link);
-};
+// const loadCSS = (cssUrl) => {
+//   const link = document.createElement('link');
+//   link.rel = 'stylesheet';
+//   link.href = cssUrl;
+//   link.type = 'text/css';
+//   document.head.appendChild(link);
+// };
 
-// Load the CSS file
-loadCSS('https://shefaligoyal17.github.io/embed-script/embed.css'); // Replace with your hosted CSS file URL
+// // Load the CSS file
+// loadCSS('summary-style.css'); // Replace with your hosted CSS file URL
 
-window.GetSummaryBanner = (id, targetSelector = '#my-custom-container') => {
+document.addEventListener('DOMContentLoaded', window.GetSummaryBanner = (id, targetSelector = '#my-custom-container') => {
   const fetchApi = async (id) => {
     try {
       const res = await fetch(`https://post-summary.yukta.one/api/summary/${id}`);
@@ -101,7 +101,8 @@ window.GetSummaryBanner = (id, targetSelector = '#my-custom-container') => {
       radioContainer.classList.add('summary-controls')
 
       const radioName = `summaryType-${bannerId}`;
-const radioLong = document.createElement('input');
+
+      const radioLong = document.createElement('input');
       radioLong.type = 'radio';
       radioLong.id = `long-${bannerId}`;
       radioLong.name = radioName;
@@ -177,4 +178,4 @@ const radioLong = document.createElement('input');
   };
 
   RenderSummaryBanner(id, targetSelector);
-};
+});
