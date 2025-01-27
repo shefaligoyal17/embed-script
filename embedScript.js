@@ -8,7 +8,7 @@ const loadCSS = (cssUrl) => {
 };
 
 // Load the CSS file
-loadCSS('embed.css'); // Replace with your hosted CSS file URL
+loadCSS('https://shefaligoyal17.github.io/embed-script/embed.css'); // Replace with your hosted CSS file URL
 
 window.GetSummaryBanner = (id, targetSelector = '#my-custom-container') => {
   const fetchApi = async (id) => {
